@@ -353,30 +353,40 @@ let totalFrogs2 = buyChocoFrogs2(11);
 console.log(totalFrogs2);
 
 ////////////////// PROBLEM 21 ////////////////////
-let sampleArray = [0,1,2,3,4,6,6,7]
+let sampleArray = [0,1,2,3,4,9,6,7]
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
-const ascendArr = function(arr){
-   let i=0;
-   let ans=true;
-
-   while(i<arr.length && ans===true){
-     if(arr[i+1]>=arr[i]){
-       return true;
-     }
-      else{
-
-       return false;
+const ascendArr = function(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i + 1] <= arr[i]) {
+      return false;
     }
-    i++;
-   }
-   return ans;
- }
- let arrayIsAscending = ascendArr(sampleArray);
- console.log(arrayIsAscending);
+  }
+  return true;
+}
+let arrayIsAscending = ascendArr(sampleArray);
+console.log(arrayIsAscending);
+// const ascendArr = function(arr){
+//    let i=0;
+//    let ans=true;
+
+//    while(i<arr.length && ans===true){
+//      if(arr[i+1]>=arr[i]){
+//        return true;
+//      }
+//       else{
+
+//        return false;
+//     }
+//     i++;
+//    }
+//    return ans;
+//  }
+//  let arrayIsAscending = ascendArr(sampleArray);
+//  console.log(arrayIsAscending);
 
 ////////////////// PROBLEM 22 ////////////////////
 
